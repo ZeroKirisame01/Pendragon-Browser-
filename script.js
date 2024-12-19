@@ -27,3 +27,11 @@ function loadThemePreference() {
 }
 
 document.addEventListener("DOMContentLoaded", loadThemePreference);
+document.querySelector('.gcse-searchbox-only').addEventListener('submit', () => {
+    document.querySelector('.gcse-searchresults-only').classList.add('active');
+});
+
+// Optional: Add a close button to hide results
+function closeResults() {
+    document.querySelector('.gcse-searchresults-only').classList.remove('active');
+}
